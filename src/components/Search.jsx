@@ -15,7 +15,7 @@ import Paper from '@material-ui/core/Paper';
 
 import listOfFilms from '../listOfFilms';
 import axios from "axios";
-import dotenv from 'dotenv'
+import dotenv from 'dotenv';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -56,12 +56,14 @@ export default function Search() {
   //axios must to be npm installed. It will fetch all data. After that we can manipulate and display the
   //data as we want in the UI. We can modify as we want. For exammple add to a new state 
   //the exactly data we want to use. 
-  axios.request(options).then(function (response) {
-	console.log(response.data);
-    }).catch(function (error) {
-        console.error(error);
-    });
 
+  const fetchFilmData = () => {
+    axios.request(options).then(function (response) {
+    console.log(response.data);
+      }).catch(function (error) {
+          console.error(error);
+      });
+    }
     return (
      <>
         <FormControl variant="outlined" className={classes.formControl}>
