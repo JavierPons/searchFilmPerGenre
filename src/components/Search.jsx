@@ -49,7 +49,7 @@ export default function Search() {
     url: `https://netflix-unofficial.p.rapidapi.com/api/${genre}`,
     headers: {
       'x-rapidapi-host': 'netflix-unofficial.p.rapidapi.com',
-      'x-rapidapi-key': process.env.API_KEY
+      'x-rapidapi-key': process.env.REACT_APP_API_KEY
     }
   };
 
@@ -64,6 +64,7 @@ export default function Search() {
           console.error(error);
       });
     }
+
     return (
      <>
         <FormControl variant="outlined" className={classes.formControl}>
