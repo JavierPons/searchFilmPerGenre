@@ -15,7 +15,7 @@ import Paper from '@material-ui/core/Paper';
 
 import listOfFilms from '../listOfFilms';
 import axios from "axios";
-import dotenv from 'dotenv';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -49,7 +49,7 @@ export default function Search() {
     url: `https://netflix-unofficial.p.rapidapi.com/api/${genre}`,
     headers: {
       'x-rapidapi-host': 'netflix-unofficial.p.rapidapi.com',
-      'x-rapidapi-key': process.env.REACT_APP_API_KEY
+      'x-rapidapi-key': 'API_KEY'
     }
   };
 
